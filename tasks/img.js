@@ -6,13 +6,13 @@ var img = ($,config) => {
 
 	return ()=>{
 		
-	    console.log('打包开始:')
-	    console.log('img:压缩、添加版本号中......')
+	    console.log('**********************************打包开始**********************************')
+	    console.log('***************	图片压缩	*************************************************')
 	    
 	    var stream = gulp.src(config.imgPath)
 	        // .pipe($.cached('img'))	            // 压缩图片
 	        .pipe($.changed(config.imgDest))
-	        
+	        // .pipe($.changed(config.htmlDest))
 	        .pipe($.imagemin([
 	                $.imagemin.gifsicle(), 
 	                $.imagemin.jpegtran(), 

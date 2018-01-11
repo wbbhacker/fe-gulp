@@ -5,6 +5,7 @@ var addRandomRe = (options) => {
 
 
 	let timestamp = new  Date().getTime();
+
 	let transform =  through.obj(function (chunk, enc, callback) {
 
 		let str,regex,strs;
@@ -21,7 +22,7 @@ var addRandomRe = (options) => {
 
 			punctuation = wrod.match(regexA)[0];
 			
-			return wrod.match(regex)[0] + '?v=' + timestamp + punctuation;
+			return wrod.match(regex)[0] + '?v=' + options.timestamp + punctuation;
 
 		});
 

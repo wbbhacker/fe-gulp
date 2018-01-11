@@ -1,6 +1,6 @@
 const config = {};
 
-config.basePath = 'project/';
+config.basePath = 'project1/';
 
 config.port = 3000;
 

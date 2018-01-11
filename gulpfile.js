@@ -31,11 +31,11 @@ gulp.watch(config.jsPath,['js']);
 gulp.watch(config.lessPath,['less']);
 
 
-
 //  --构建相关任务---------------------------------------
 	// 项目初始化
 gulp.task('init',tasks.init($,config));
-
+	
+	
 	// 开发任务
 gulp.task('server',tasks.server($,config));
 gulp.task('sass',tasks.sass($,config));
