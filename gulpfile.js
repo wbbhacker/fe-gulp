@@ -19,9 +19,13 @@ $.gulp = gulp;
 $.pngquant = require('imagemin-pngquant');
 $.mozjpeg = require('imagemin-mozjpeg');
 $.merge = require('merge-stream');
+$.makeDir = require('make-dir');
+$.chalk = require('chalk');
+
 $.myRev = require('./plug-in/gulp-addRandomRev.js');
 $.rePath = require('./plug-in/gulp-rewrite-path.js');
-$.makeDir = require('make-dir');
+
+$.HRF = require('./plug-in/gulp-hanldeRelativeFile.js');
 
 
 //  --监视任务------------------------------------------------
@@ -30,30 +34,45 @@ gulp.watch(config.scssPath,['sass']);
 gulp.watch(config.jsPath,['js']);
 gulp.watch(config.lessPath,['less']);
 
-
 //  --构建相关任务---------------------------------------
 	// 项目初始化
+
 gulp.task('init',tasks.init($,config));
 	
-	
 	// 开发任务
+		// 服务器
 gulp.task('server',tasks.server($,config));
+		// 监听sass
 gulp.task('sass',tasks.sass($,config));
+		//监听js
 gulp.task('js',tasks.js($,config));
-
+		// 监听less
 gulp.task('less',tasks.less($,config));
 	
+	
 	// 打包任务
-gulp.task('img',tasks.img($,config));
+
+		// 清除缓存
+gulp.task('cleancache',tasks.cleancache($,config));
 
 
-gulp.task('rev',tasks.rev($,config));
+		// 图片压缩
 
+gulp.task('img',tasks.img($,config,false));
+gulp.task('reimg',tasks.img($,config,true));
+
+
+		// 删除文件夹
 gulp.task('clean',tasks.clean($,config));
 
-gulp.task('rePack',$.sequence('clean','img','rev'));
+		// js,img,css处理
+gulp.task('rev',tasks.rev($,config));
+	
+	
+	// 命令
+gulp.task('rebuild',$.sequence('clean','reimg','rev'));
 
-gulp.task('pack',$.sequence('img','rev'));
+gulp.task('build',$.sequence('img','rev'));
 
 	// 默认任务
 gulp.task('default',['server']);

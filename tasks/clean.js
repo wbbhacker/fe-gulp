@@ -5,7 +5,7 @@ var clean = ($,config)=>{
 
 	return ()=>{
 		
-
+		
 		var a = gulp.src(config.basePath+'build')
 					.pipe($.clean());
 

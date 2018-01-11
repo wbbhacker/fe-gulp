@@ -4,8 +4,14 @@ var rev = ($,config)=>{
 	const gulp = $.gulp;
 
 	return ()=>{
-		console.log('***************	html,js,css压缩、丑化	*************************************')
+
+		console.log($.chalk.greenBright('***************	html,js,css压缩、丑化	***************************'));
+
 		let timestamp = new  Date().getTime();
+		
+
+		console.log($.chalk.red('本次添加版本号为：'+timestamp));
+
 
 		var a = gulp.src(config.htmlPath)
 
