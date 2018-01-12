@@ -41,7 +41,7 @@ function filePahts(arr){
 	for(let i=0; i<arr.length; i++){
 
 		glob(arr[i], function (er, files) {
-			
+
 			fs.createReadStream('ex.txt')
             .pipe(through2(function(chunk, enc, callback) {
                 for (var i = 0; i < chunk.length; i++)
@@ -53,6 +53,8 @@ function filePahts(arr){
                 callback()
             }))
             .pipe(fs.createWriteStream('out.txt'))
+
+            
 		});
 
 	}	

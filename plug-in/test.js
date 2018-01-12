@@ -21,7 +21,6 @@ config.jsDest = config.basePath + 'build/js/';
 var arrPath = ['a.txt']
 filePahts(arrPath)
 
-
 function filePahts(arr) {
     var arrs = [];
 
@@ -62,7 +61,7 @@ function filePahts(arr) {
 	                    }))
 
 	                    .pipe(fs.createWriteStream('a.txt'))
-
+	                    
 	                    .on('finish', function () {
 						 	console.log('完成')
 						})

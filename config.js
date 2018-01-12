@@ -1,6 +1,6 @@
 const config = {};
 
-config.basePath = 'project1/';
+config.basePath = '../2018/go/0127/gujian/'
 
 config.port = 3000;
 
