@@ -14,7 +14,6 @@ const tasks = requireDir('./tasks');
 $.browserSync = require('browser-sync').create();
 $.reload = $.browserSync.reload;
 
-
 $.gulp = gulp;
 $.pngquant = require('imagemin-pngquant');
 $.mozjpeg = require('imagemin-mozjpeg');

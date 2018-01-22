@@ -1,13 +1,15 @@
 var through = require('through2');
 var path = require('path');
 var fs = require('fs');
-var glob = require("glob")
+var glob = require("glob");
+var vfs = require('vinyl-fs');
 
 	
-var hanldeRelativeFile = (options, reg) => {
+var hanldeRelativeFile = (options,basePath) => {
 
 
     let timestamp = new Date().getTime();
+
 
     let transform = through.obj(function(chunk, enc, callback) {
 
@@ -16,17 +18,13 @@ var hanldeRelativeFile = (options, reg) => {
         file = path.parse(chunk.path);
         regex = new RegExp(file.name + '\\' + file.ext + '\\?v=\\d*');
 
-        console.log(regex)
-
-
-
-
+        filePahts(options,regex,basePath);
 
 
         this.push(chunk);
 
         callback();
-
+        
 
     });
 
@@ -35,29 +33,64 @@ var hanldeRelativeFile = (options, reg) => {
 }
 
 
-function filePahts(arr){
-	var arrs = [];
+function filePahts(arr,reg,basePath){
 
-	for(let i=0; i<arr.length; i++){
+    let timestamp = new  Date().getTime();
 
-		glob(arr[i], function (er, files) {
+    arr.map(function(v,i){
 
-			fs.createReadStream('ex.txt')
-            .pipe(through2(function(chunk, enc, callback) {
-                for (var i = 0; i < chunk.length; i++)
-                    if (chunk[i] == 97)
-                        chunk[i] = 122 // swap 'a' for 'z' 
+        glob(v, function (er, files) { 
+            var destPath;
+            switch(files[0].match(/(\.css|\.js|\.html)/g)[0]){
 
-                this.push(chunk)
+                case '.css':
+                    console.log('.css');
+                    console.log(files);
+                    destPath = basePath + 'build/css/';
 
-                callback()
-            }))
-            .pipe(fs.createWriteStream('out.txt'))
+                    break;
+                case '.js':
+                    console.log('js');
+                    console.log(files);
+                    destPath = basePath + 'build/css/';
 
-            
-		});
+                    break;
+                case '.html':
+                    console.log('html')
+                    console.log(files)
+                    destPath = basePath;
 
-	}	
+                    break;
+            }
+
+            vfs.src(files)
+                .pipe(through.obj(function (chunk, enc, callback) {
+
+                        var str;
+
+                        if(chunk.path.search(/\\lib\\/) == -1) {
+
+                            str = chunk.contents.toString();
+
+                            strs = str.replace(reg,function(wrod){
+                                console.log(wrod.split('=')[0]+'='+timestamp)
+                                return wrod.split('=')[0]+'='+timestamp;
+                            });
+
+                            chunk.contents = new Buffer(strs);
+
+                        }
+
+                        this.push(chunk)
+                        callback()
+
+                }))
+                .pipe(vfs.dest(destPath))
+
+        });
+
+    });
+
 }
 
 
