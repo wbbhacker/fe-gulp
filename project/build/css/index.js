@@ -1,1 +1,1 @@
-var elem=document.getElementById("box");elem.innerHTML="hello，wrold！";var str="build/img/1.jpg?v=1516604619333";console.log(str);
+var elem=document.getElementById("box");elem.innerHTML="hello，wrold！";var str="build/img/1.jpg?v=1516945180762";console.log(str);

@@ -37,7 +37,7 @@ var img = ($,config,condition) => {
 
 	        .pipe($.if(condition, noCache,cache))
 
-	        .pipe($.cache($.HRF(arrPath, config.basePath)))
+	        // .pipe($.cache($.HRF(arrPath, config.basePath)))
 	 		
 	        .pipe(gulp.dest(config.imgDest))
 	    	

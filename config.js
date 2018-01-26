@@ -2,16 +2,18 @@ const config = {};
 
 // config.basePath = '../2018/go/0125/sony-ps4/';
 
-// config.basePath = '../2018/go/0127/gujian/';
+config.basePath = '../2018/go/0127/gujian/';
 
-config.basePath = 'project/';
+// config.basePath = 'project/';
 
 // config.basePath = '../2018/auto-now/0119/wolkswagen/';
-
 // config.basePath = '../2018/go/0122/kfc-wap/';
+
+// config.basePath = '/2018/go/0201/changlong/';
 
 
 config.port = 3000;
+
 
 config.htmlPath = config.basePath+'static/**/*.html';
 config.htmlDest = config.basePath;

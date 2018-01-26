@@ -4,5 +4,8 @@ var a = {
     'name': 'wangbinsss'
 }
 
+
+
+
 console.log('this')
 console.log(a)

@@ -9,7 +9,8 @@ var hanldeRelativeFile = (options,basePath) => {
 
 
     let timestamp = new Date().getTime();
-
+    
+   
 
     let transform = through.obj(function(chunk, enc, callback) {
 
@@ -44,20 +45,20 @@ function filePahts(arr,reg,basePath){
             switch(files[0].match(/(\.css|\.js|\.html)/g)[0]){
 
                 case '.css':
-                    console.log('.css');
-                    console.log(files);
+                    // console.log('.css');
+                    // console.log(files);
                     destPath = basePath + 'build/css/';
 
                     break;
                 case '.js':
-                    console.log('js');
-                    console.log(files);
+                    // console.log('js');
+                    // console.log(files);
                     destPath = basePath + 'build/css/';
 
                     break;
                 case '.html':
-                    console.log('html')
-                    console.log(files)
+                    // console.log('html')
+                    // console.log(files)
                     destPath = basePath;
 
                     break;
