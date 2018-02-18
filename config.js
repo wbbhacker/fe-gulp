@@ -1,12 +1,27 @@
 const config = {};
 
+<<<<<<< HEAD
 // config.basePath = 'project/'
 
 // config.basePath = '../../svn/go/0122/0122/kfc-wap/'
 
 config.basePath = '../../svn/go/0209/wenshi/'
+=======
+// config.basePath = '../2018/go/0125/sony-ps4/';
+
+config.basePath = '../2018/go/0127/gujian/';
+
+// config.basePath = 'project/';
+
+// config.basePath = '../2018/auto-now/0119/wolkswagen/';
+// config.basePath = '../2018/go/0122/kfc-wap/';
+
+// config.basePath = '/2018/go/0201/changlong/';
+
+>>>>>>> f5a08bdded2a73dd00bdbcfa23a891d049936067
 
 config.port = 3000;
+
 
 config.htmlPath = config.basePath+'static/**/*.html';
 config.htmlDest = config.basePath;

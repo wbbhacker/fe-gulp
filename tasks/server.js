@@ -8,7 +8,8 @@ var server = ($,config) => {
 	            data: 'index.html',
 	        },
 	        port:config.port,
-	        open: 'external'
+	        open: 'external',
+	        notify:false
 	    });
 	}
 }

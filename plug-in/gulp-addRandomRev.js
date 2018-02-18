@@ -12,11 +12,11 @@ var addRandomRe = (options) => {
 
 		str = chunk.contents.toString();
 		
-		regex = /\.(png|jpg|gif|js|css)(\?v=[0-9]*)*(\"|\'|\)){1}/g;
+		regex = /\.(png|jpg|gif|js|css|mp3)(\?v=[0-9]*)*(\"|\'|\)){1}/g;
 
 		strs = str.replace(regex,function(wrod){
 
-			let regex = /\.[a-zA-Z]+/g,
+			let regex = /\.[a-zA-Z]+[3]?/g,
 				regexA = /\"|\'|\)/g,
 				punctuation;
 

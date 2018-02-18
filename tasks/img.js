@@ -27,16 +27,17 @@ var img = ($,config,condition) => {
 	                ],{verbose:true});
 
 	    var arrPath = [
-	    		config.htmlDest+'**/*.html',
+	    		config.htmlDest+'*.html',
 	    		config.cssDest+'**/*.css',
 	    		config.jsDest+'**/*.js'
 	    		];
+
 
 	    var stream = gulp.src(config.imgPath)
 
 	        .pipe($.if(condition, noCache,cache))
 
-	        // .pipe($.cache($.HRF(arrPath,'img')))
+	        // .pipe($.cache($.HRF(arrPath, config.basePath)))
 	 		
 	        .pipe(gulp.dest(config.imgDest))
 	    	

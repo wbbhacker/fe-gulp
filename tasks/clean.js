@@ -7,10 +7,10 @@ var clean = ($,config)=>{
 		
 		
 		var a = gulp.src(config.basePath+'build')
-					.pipe($.clean());
+					.pipe($.clean({force: true}));
 
 		var b = gulp.src(config.basePath+'*.html')
-					.pipe($.clean());
+					.pipe($.clean({force: true}));
 
 
 	}

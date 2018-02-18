@@ -20,6 +20,7 @@ var sass = ($,config) => {
 
 	        .pipe(gulp.dest(config.scssDest))
 	        .pipe($.reload({stream: true}));
+	        
 	    return stream;
 	    
 	}
