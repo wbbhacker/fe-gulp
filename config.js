@@ -1,6 +1,10 @@
 const config = {};
 
-config.basePath = '../2018/go/0127/gujian/'
+// config.basePath = 'project/'
+
+// config.basePath = '../../svn/go/0122/0122/kfc-wap/'
+
+config.basePath = '../../svn/go/0209/wenshi/'
 
 config.port = 3000;
 
