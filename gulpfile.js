@@ -26,7 +26,6 @@ $.rePath = require('./plug-in/gulp-rewrite-path.js');
 
 $.HRF = require('./plug-in/gulp-hanldeRelativeFile.js');
 
-
 //  --监视任务------------------------------------------------
 gulp.watch(config.htmlPath).on('change', $.reload);
 gulp.watch(config.scssPath,['sass']);
@@ -72,6 +71,9 @@ gulp.task('rev',tasks.rev($,config));
 gulp.task('rebuild',$.sequence('clean','reimg','rev'));
 
 gulp.task('build',$.sequence('img','rev'));
+
+// 初始化yml
+
 
 	// 默认任务
 gulp.task('default',['server']);

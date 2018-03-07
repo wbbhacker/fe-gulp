@@ -10,7 +10,7 @@ var init = ($,config) => {
   		$.makeDir(config.basePath+'static/img');
   		$.makeDir(config.basePath+'static/js');
       $.makeDir(config.basePath+'static/scss');
-  		$.makeDir(config.basePath+'static/less');
+  		// $.makeDir(config.basePath+'static/less');
   		$.makeDir(config.basePath+'static/music');
   		
 	}

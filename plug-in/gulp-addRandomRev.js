@@ -3,7 +3,7 @@ var through = require('through2');
 
 var addRandomRe = (options) => {
 
-
+	
 	let timestamp = new  Date().getTime();
 
 	let transform =  through.obj(function (chunk, enc, callback) {

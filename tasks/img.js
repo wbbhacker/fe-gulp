@@ -32,6 +32,7 @@ var img = ($,config,condition) => {
 	    		config.jsDest+'**/*.js'
 	    		];
 
+	    		
 
 	    var stream = gulp.src(config.imgPath)
 

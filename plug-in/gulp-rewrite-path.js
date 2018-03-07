@@ -9,7 +9,7 @@ var reWritePath = (options) => {
 
 		str = chunk.contents.toString();
 
-		regex = /(\"|\'|'\(){1}(css|js|img|music){1}\/{1}/g;
+		regex = /(\"|\'|'\(|\"\.\/|\'\.){1}(css|js|img|music){1}\/{1}/g;
 
 		strs = str.replace(regex,function(word){
 
