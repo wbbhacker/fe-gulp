@@ -1,5 +1,6 @@
 const config = {};
 
+<<<<<<< HEAD
 // config.basePath = '/2018/go/0209/wenshi/';
 
 // config.basePath = '/web/sale_go/20180226_heibaoB/';
@@ -9,7 +10,10 @@ const config = {};
 // config.basePath = '/web/sale_go/20180306_demo/';
 
 config.basePath = '/web/sale_go/20180314_Panasonic/';
+=======
+>>>>>>> c25c117a85f06ef2fbe4dca8e2fec649efdcede5
 
+config.basePath = '../../svn/go/0209/wenshi/'
 
 
 config.port = 3000;
