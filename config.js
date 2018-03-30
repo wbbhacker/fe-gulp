@@ -1,7 +1,7 @@
 const config = {};
 
 
-config.basePath = '../../svn/go/0209/wenshi/'
+config.basePath = '../../web/sale_auto/20180322_avancier/';
 
 config.port = 3000;
 
