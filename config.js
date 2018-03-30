@@ -1,13 +1,17 @@
 const config = {};
-// config.basePath = '/2018/go/0209/wenshi/';
 
+config.basePath = '/web/sale_go/20180402-watsons/';
+
+// config.basePath = '/web/sale_go/20180314_Panasonic/';
 // config.basePath = '/web/sale_go/20180226_heibaoB/';
-
-// config.basePath = '/2018/go/0207/changlong-ocean/'
-
 // config.basePath = '/web/sale_go/20180306_demo/';
+// config.basePath = '/2018/go/0209/wenshi/'
+// config.basePath = '/web/sale_auto/20180322_avancier/';
+// config.basePath = '/web/sale_go/20180315_pingan/';
+// config.basePath = '/web/sale_go/20180327-demo/';
+// config.basePath = '/2018/go/0125/sony-ps4/';
 
-config.basePath = '/web/sale_go/20180314_Panasonic/';
+
 
 config.port = 3000;
 
