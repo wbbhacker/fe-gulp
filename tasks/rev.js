@@ -22,6 +22,7 @@ var rev = ($,config)=>{
 			}))
 			.pipe($.myRev({timestamp:timestamp}))
 			.pipe($.htmlmin({collapseWhitespace: true}))
+			
 			.pipe($.debug({title: 'html文件处理:'}))
 			.pipe(gulp.dest(config.htmlDest))
 			

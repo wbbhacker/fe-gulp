@@ -60,7 +60,6 @@ function filePahts(arr,reg,basePath){
                     // console.log('html')
                     // console.log(files)
                     destPath = basePath;
-
                     break;
             }
 

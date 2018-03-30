@@ -1,10 +1,23 @@
 const config = {};
 
+config.basePath = '/web/sale_go/20180402-watsons/';
 
+// config.basePath = '/web/sale_go/20180314_Panasonic/';
+// config.basePath = '/web/sale_go/20180226_heibaoB/';
+// config.basePath = '/web/sale_go/20180306_demo/';
+// config.basePath = '/2018/go/0209/wenshi/'
+// config.basePath = '/web/sale_auto/20180322_avancier/';
+// config.basePath = '/web/sale_go/20180315_pingan/';
+// config.basePath = '/web/sale_go/20180327-demo/';
+// config.basePath = '/2018/go/0125/sony-ps4/';
+
+<<<<<<< HEAD
 config.basePath = '../../web/sale_auto/20180322_avancier/';
+=======
+>>>>>>> 144dec56a756f77e1b8d0e55da54ee7838d6ad21
+
 
 config.port = 3000;
-
 
 config.htmlPath = config.basePath+'static/**/*.html';
 config.htmlDest = config.basePath;
