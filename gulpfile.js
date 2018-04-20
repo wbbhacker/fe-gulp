@@ -8,9 +8,11 @@ const config = require('./config.js');
 	// 任务加载
 const requireDir = require('require-dir');
 const tasks = requireDir('./tasks');
+const gutil = require('gulp-util');
 	// 图片压缩
 
 // 服务器
+$.gutil = gutil;
 $.browserSync = require('browser-sync').create();
 $.reload = $.browserSync.reload;
 

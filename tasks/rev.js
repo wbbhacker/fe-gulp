@@ -42,6 +42,7 @@ var rev = ($,config)=>{
 			}))
 			.pipe($.myRev({timestamp:timestamp}))
 			.pipe($.uglify())
+			.on('error', function (err) { $.gutil.log($.gutil.colors.red('[Error]'), err.toString()); })
 			.pipe($.debug({title: 'js文件处理:'}))
 			.pipe(gulp.dest(config.jsDest))
 

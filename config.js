@@ -1,7 +1,10 @@
 const config = {};
 
-config.basePath = '/web/sale_go/20180402-watsons/';
+// config.basePath = '/worktest/gulp-demo1/';
+config.basePath = '/web/sale_go/20180419_helix/';
+// config.basePath  = '/worktest/gulp-demo/';
 
+// config.basePath = '/web/sale_go/20180402-watsons/';
 // config.basePath = '/web/sale_go/20180314_Panasonic/';
 // config.basePath = '/web/sale_go/20180226_heibaoB/';
 // config.basePath = '/web/sale_go/20180306_demo/';
@@ -10,8 +13,6 @@ config.basePath = '/web/sale_go/20180402-watsons/';
 // config.basePath = '/web/sale_go/20180315_pingan/';
 // config.basePath = '/web/sale_go/20180327-demo/';
 // config.basePath = '/2018/go/0125/sony-ps4/';
-
-
 
 config.port = 3000;
 

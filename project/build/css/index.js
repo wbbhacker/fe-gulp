@@ -1,1 +1,0 @@
-var elem=document.getElementById("box");elem.innerHTML="hello，wrold！";var str="build/img/1.jpg?v=1517553622887";console.log(str);
