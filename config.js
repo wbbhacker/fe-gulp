@@ -14,6 +14,15 @@ config.basePath = '/web/sale_go/20180419_helix/';
 // config.basePath = '/web/sale_go/20180327-demo/';
 // config.basePath = '/2018/go/0125/sony-ps4/';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+config.basePath = '../../web/sale_auto/20180322_avancier/';
+=======
+>>>>>>> 144dec56a756f77e1b8d0e55da54ee7838d6ad21
+
+
+>>>>>>> 145911ce0d9294d33c5420e0a818a1d919927a0c
 config.port = 3000;
 
 config.htmlPath = config.basePath+'static/**/*.html';
