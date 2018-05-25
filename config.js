@@ -1,9 +1,35 @@
+
 const config = {};
 
-// config.basePath = '/worktest/gulp-demo1/';
-config.basePath = '/web/sale_go/20180419_helix/';
-// config.basePath  = '/worktest/gulp-demo/';
+config.basePath = '/web/sale_auto/20180528_changhe_PC/';
 
+// config.basePath = '/web/sale_auto/20180528_changhe_WAP/';
+
+// config.basePath = '/web/sale_go/20180525_huawei/';
+
+// config.basePath = '/web/sale_go/wbb-demo-1/football-3D/';
+
+// config.basePath = '/web/sale_go/20180508_mido/';
+
+// config.basePath = '/web/sale_go/20180518_kitchen/';
+
+// config.basePath = '/web/sale_go/wenshi-data/';
+
+// config.basePath = '/web/sale_auto/20180512_audi/';
+
+
+// config.basePath = '/web/sale_auto/20180511_BMW/';
+// config.basePath = '/web/sale_auto/20180511_BMW_WAP/';
+// config.basePath = '/web/sale_go/20180502_HNA/';
+// config.basePath = '/web/sale_auto/20180502_BMWx1_PC/';
+// config.basePath = '/web/sale_auto/20180502_BMWx1_WAP/';
+// config.basePath = '/worktest/BMWx1-PC/';
+// config.basePath = '/web/sale_go/20180425_huoxiang/';
+// config.basePath = '/web/sale_go/20180419_helix/';
+// config.basePath = '/web/sale_go/20180326-demo/';
+// config.basePath = '/worktest/loading-demo/';
+// config.basePath = '/worktest/gulp-demo1/';
+// config.basePath  = '/worktest/gulp-demo/';
 // config.basePath = '/web/sale_go/20180402-watsons/';
 // config.basePath = '/web/sale_go/20180314_Panasonic/';
 // config.basePath = '/web/sale_go/20180226_heibaoB/';
@@ -14,15 +40,8 @@ config.basePath = '/web/sale_go/20180419_helix/';
 // config.basePath = '/web/sale_go/20180327-demo/';
 // config.basePath = '/2018/go/0125/sony-ps4/';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-config.basePath = '../../web/sale_auto/20180322_avancier/';
-=======
->>>>>>> 144dec56a756f77e1b8d0e55da54ee7838d6ad21
 
 
->>>>>>> 145911ce0d9294d33c5420e0a818a1d919927a0c
 config.port = 3000;
 
 config.htmlPath = config.basePath+'static/**/*.html';
